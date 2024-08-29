@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="SudokuUWP.InstructionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Margin="10" Grid.Row="0" VerticalScrollBarVisibility="Visible" Background="Blue">
+            <StackPanel Background="White" Margin="1" Padding="10">
+                <TextBlock FontSize="24" Margin="0,0,0,20" FontWeight="Bold">How to play Sudoku</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap">In the game of Sudoku, the objective is to solve all cells of a 9x9 grid. The game 
+                    starts with some of the cells given, i.e. there are already numbers in them. These given cells are then used as clues to determine what numbers 
+                    go into the other cells.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap">The rules for which numbers can go into which cells are simple: any vertical row 
+                    or horizontal line of 9 cells may only contain each number from 1 to 9, exactly once. The main grid is also composed of 9 smaller, 3x3 grids. 
+                    Each of these smaller grids may only have each digit exactly once.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap">The game is solved - or won - when all cells are correctly filled with numbers 
+                    withtout conflicting the rules.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,20" TextWrapping="Wrap">Many variations of the game exist, with varying size of the grid and some kind of variant
+                    of the rules. This version of the game is played by the basic rules.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap"><Run FontWeight="Bold">To start a game,</Run> hit the "Start new game" button on the
+                    main window. This will randomize the given cells from a list of existing, predefined layouts, shuffled in many ways to create more layouts to
+                    solve.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap">Select the cell in which you wish to place a number, either by tapping or clicking
+                    with the mouse. The selected cell is shown in light blue background color. You may only place numbers in empty cells, or cells that you have 
+                    set before - the initial given numbers are displayed in gray color and may not be overwritten.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap">If you make a choice that leads the game to an un-solvable state, the borders will
+                    turn red to indicate this. Note, that the solving engine is not 100% accurate; sometimes, a game may be solvable even if the game engine 
+                    thinks it is not. Mostly, though, you will probably have made a mistake, in which case the cells in question are shown in red color.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,20" TextWrapping="Wrap">After setting a number, you can set that same number to other cells by double-clicking
+                    on the cell in which you wish to place the same number. Cells that already have that particular number will be shown in blue color.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap"><Run FontWeight="Bold">If you get stuck</Run> at any point during a game, you can
+                    press the "Hint" button to get one cell solved for you. This cell is shown in green font color. You can also have the game engine attempt to
+                    solve the whole game by pressing the "Solve game" button.</TextBlock>
+
+                <TextBlock FontSize="18" Margin="0,0,0,10" TextWrapping="Wrap">After solving a game, great wisdoms will be revealed to you. Or, at least something
+                    mildly amusing...</TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Border BorderBrush="Black" BorderThickness="0, 1, 0, 0" Grid.Row="1">
+        <Button Name="HideInstructionsButton" 
+                Grid.Row="1" 
+                Background="#FF7ACF9D"
+                Click="HideInstructionsButton_Click"
+                Content="Okey dokey, I think I got it"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                FontSize="18"
+                Margin="0,20,0,20"/>
+        </Border>
+    </Grid>
+</Page>

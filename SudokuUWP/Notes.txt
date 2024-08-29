@@ -1,0 +1,3 @@
+﻿See about text animations: https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/how-to-apply-animations-to-text
+
+That could be used to animate the "game completed" overlay text...
