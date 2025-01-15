@@ -6,7 +6,7 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
-using Microsoft.AppCenter.Analytics;
+//using Microsoft.AppCenter.Analytics;
 using Windows.ApplicationModel;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
@@ -150,7 +150,7 @@ namespace SudokuUWP
             
             gameController.SetRandomPreset();
             SetSolvable();
-            Analytics.TrackEvent("New random preset game started");
+            //Analytics.TrackEvent("New random preset game started");
 #if DEBUG
             // Display the game number if debugging
             var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
